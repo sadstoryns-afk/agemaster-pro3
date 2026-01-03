@@ -48,7 +48,27 @@
         .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 5000; align-items: center; justify-content: center; padding: 20px; }
         .modal-content { background: white; width: 100%; max-width: 400px; border-radius: 25px; padding: 25px; position: relative; }
     </style>
+
+
+
+
+
+<meta name="description" content="Age Calculator, Love Matcher, and Secure Password Generator - All in one place.">
+<meta name="keywords" content="Age Calculator 2026, Love Matcher, Secure Password, Day Finder tool">
+<meta name="author" content="ToolMaster Pro">
+<meta name="google-site-verification" content="sQYMF8wNauVN-H3J7u6rwydmqwZ6aSw5QtrshaNevWQ" />
+
+
+
+
+
+
+
+
+
+    
 </head>
+
 <body>
 
 <div class="header">
