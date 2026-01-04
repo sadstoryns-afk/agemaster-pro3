@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html lang="hi">
-<head>
-    <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 
@@ -13,23 +10,12 @@
     
     <meta name="google-site-verification" content="sQYMF8wNauVN-H3J7u6rwydmqwZ6aSw5QtrshaNevWQ" />
 
-    <title>ToolMaster Pro - Exact Age Calculator & Smart Tools</title>
-    <meta name="description" content="ToolMaster Pro: सबसे सटीक Age Calculator, Love Matcher और Password Generator। मुफ्त और सुरक्षित वेब टूल्स।">
-    <meta name="keywords" content="Age Calculator, Love Matcher, Day Finder, ToolMaster Pro, Exact Age Finder 2026">
-    <meta name="author" content="ToolMaster Pro">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <style>
-        :root { --primary: #6366f1; --secondary: #a855f7; --accent: #10b981; --bg: #0f172a; --card: #ffffff; --text: #1e293b; }
-        .light-mode { --bg: #f1f5f9; --card: #ffffff; --text: #1e293b; }
+    <title>ToolMaster Pro - Exact ="ToolMaster Pro: सबसे सटीक Age Calculator, Love card: #ffffff; --text: #1e293b; }
         * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
         body { margin: 0; font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--text); transition: 0.3s; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding-bottom: 40px; }
         .header { width: 100%; max-width: 500px; display: flex; justify-content: space-between; align-items: center; padding: 20px; }
         .nav-btn { background: white; border: none; width: 45px; height: 45px; border-radius: 12px; font-size: 20px; cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
-        .live-timer { color: white; font-weight: 700; font-size: 14px; background: rgba(255,255,255,0.1); padding: 8px 15px; border-radius: 30px; border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(5px); }
-        .container { width: 92%; max-width: 450px; }
-        .tool-card { background: var(--card); padding: 25px; border-radius: 30px; box-shadow: 0 15px 35px rgba(0,0,0,0.2); margin-bottom: 25px; text-align: center; border: 1px solid rgba(0,0,0,0.05); }
-        h2 { background: linear-gradient(to right, #6366f1, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; margin: 0 0 15px 0; font-size: 20px; }
+        .live-timer { color: white; font-weight: 700; font-size: 14px; background: rgba(255,255,255,0.1); padding: 8px 15px; border-radius: 30px; border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(5px); px; }
         input, textarea, select { width: 100%; padding: 12px; border: 2px solid #e2e8f0; border-radius: 15px; font-size: 14px; margin-bottom: 10px; outline: none; }
         .main-btn { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; border: none; width: 100%; padding: 15px; border-radius: 15px; font-size: 15px; font-weight: 700; cursor: pointer; transition: 0.2s; }
         .res-box { display: none; background: #f8fafc; padding: 15px; border-radius: 15px; border: 1px solid #ddd; margin-top: 15px; word-break: break-all; }
@@ -59,60 +45,7 @@
 
 <div class="modal" id="aboutModal">
     <div class="modal-content">
-        <span style="position:absolute; top:15px; right:20px; font-size:25px; cursor:pointer;" onclick="closeAbout()">&times;</span>
-        <h3 style="color:var(--primary)">About Us</h3>
-        <p style="font-size:14px; line-height:1.6;"><b>ToolMaster Pro</b> एक आधुनिक टूल हब है। यहाँ आपकी प्राइवेसी सुरक्षित है।</p>
-    </div>
-</div>
-
-<div class="container">
-    <div class="tool-card">
-        <h2>Age Calculator 🎂</h2>
-        <input type="date" id="dob">
-        <button onclick="calcAge()" class="main-btn">Check Age ⚡</button>
-        <div id="ageRes" class="res-box"><b id="ageOut" style="color:var(--primary); font-size:18px;"></b></div>
-    </div>
-
-    <div class="tool-card">
-        <h2>Day Finder 🔮</h2>
-        <input type="date" id="dayInput">
-        <button onclick="calcDay()" class="main-btn" style="background:var(--accent)">दिन जानें</button>
-        <div id="dayRes" class="res-box"><b id="dayOut" style="font-size:18px;"></b></div>
-    </div>
-
-    <div class="tool-card">
-        <h2>Password Generator 🔐</h2>
-        <button onclick="genPass()" class="main-btn" style="background:var(--secondary)">Secure Password बनाएँ</button>
-        <div id="passRes" class="res-box"><b id="passOut" style="font-family: monospace; letter-spacing: 1px; color:var(--accent);"></b></div>
-    </div>
-
-    <div class="tool-card">
-        <h2>Word Counter ✍️</h2>
-        <textarea id="wordText" placeholder="यहाँ टाइप करें..." oninput="countWords()" rows="3"></textarea>
-        <p style="font-size:13px; font-weight:600;">शब्द: <span id="wCount">0</span> | अक्षर: <span id="cCount">0</span></p>
-    </div>
-
-    <div class="tool-card">
-        <h2>BMR Health Check ⚖️</h2>
-        <input type="number" id="weight" placeholder="वजन (kg)">
-        <input type="number" id="height" placeholder="लंबाई (cm)">
-        <input type="number" id="ageBmr" placeholder="उम्र">
-        <select id="gender">
-            <option value="male">पुरुष (Male)</option>
-            <option value="female">महिला (Female)</option>
-        </select>
-        <button onclick="calcBMR()" class="main-btn" style="background:#f59e0b">BMR चेक करें</button>
-        <div id="bmrRes" class="res-box"><b id="bmrOut"></b></div>
-    </div>
-</div>
-
-<script>
-    setInterval(() => { document.getElementById('clock').innerText = new Date().toLocaleTimeString(); }, 1000);
-    function toggleDrawer() {
-        const d = document.getElementById('side-drawer');
-        const o = document.getElementById('overlay');
-        d.classList.toggle('active');
-        o.style.display = d.classList.contains('active') ? 'block' : 'none';
+        <span style="position:absolute; top:15px; right:20px; ';
     }
     function toggleTheme() { document.body.classList.toggle('light-mode'); toggleDrawer(); }
     function openAbout() { toggleDrawer(); document.getElementById('aboutModal').style.display = 'flex'; }
