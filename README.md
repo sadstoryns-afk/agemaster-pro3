@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="hi">
 <head>
@@ -8,7 +7,7 @@
     <meta name="google-site-verification" content="sQYMF8wNauVN-H3J7u6rwydmqwZ6aSw5QtrshaNevWQ" />
 
     <title>ToolMaster Pro - Exact Age Calculator & Smart Tools</title>
-    <meta name="description" content="ToolMaster Pro: Sabse sateek Age Calculator, Love Matcher aur Password Generator. Muft aur surakshit web tools.">
+    <meta name="description" content="ToolMaster Pro: सबसे सटीक Age Calculator, Love Matcher और Password Generator। मुफ्त और सुरक्षित वेब टूल्स।">
     <meta name="keywords" content="Age Calculator, Love Matcher, Day Finder, ToolMaster Pro, Exact Age Finder 2026">
     <meta name="author" content="ToolMaster Pro">
 
@@ -16,29 +15,21 @@
     <style>
         :root { --primary: #6366f1; --secondary: #a855f7; --accent: #10b981; --bg: #0f172a; --card: #ffffff; --text: #1e293b; }
         .light-mode { --bg: #f1f5f9; --card: #ffffff; --text: #1e293b; }
-        
         * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
         body { margin: 0; font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--text); transition: 0.3s; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding-bottom: 40px; }
-        
         .header { width: 100%; max-width: 500px; display: flex; justify-content: space-between; align-items: center; padding: 20px; }
         .nav-btn { background: white; border: none; width: 45px; height: 45px; border-radius: 12px; font-size: 20px; cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
         .live-timer { color: white; font-weight: 700; font-size: 14px; background: rgba(255,255,255,0.1); padding: 8px 15px; border-radius: 30px; border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(5px); }
-
         .container { width: 92%; max-width: 450px; }
         .tool-card { background: var(--card); padding: 25px; border-radius: 30px; box-shadow: 0 15px 35px rgba(0,0,0,0.2); margin-bottom: 25px; text-align: center; border: 1px solid rgba(0,0,0,0.05); }
         h2 { background: linear-gradient(to right, #6366f1, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; margin: 0 0 15px 0; font-size: 20px; }
-        
-        input, textarea, select { width: 100%; padding: 12px; border: 2px solid #e2e8f0; border-radius: 15px; font-size: 14px; margin-bottom: 10px; outline: none; font-family: inherit; }
+        input, textarea, select { width: 100%; padding: 12px; border: 2px solid #e2e8f0; border-radius: 15px; font-size: 14px; margin-bottom: 10px; outline: none; }
         .main-btn { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; border: none; width: 100%; padding: 15px; border-radius: 15px; font-size: 15px; font-weight: 700; cursor: pointer; transition: 0.2s; }
-        .main-btn:active { transform: scale(0.97); }
-        
         .res-box { display: none; background: #f8fafc; padding: 15px; border-radius: 15px; border: 1px solid #ddd; margin-top: 15px; word-break: break-all; }
-        
         #side-drawer { position: fixed; top: 0; left: -100%; width: 280px; height: 100%; background: white; z-index: 3000; transition: 0.4s; padding: 40px 20px; box-shadow: 10px 0 30px rgba(0,0,0,0.5); }
         #side-drawer.active { left: 0; }
         .drawer-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 2500; }
         .drawer-item { padding: 12px; margin-bottom: 8px; border-radius: 10px; background: #f1f5f9; cursor: pointer; font-weight: 600; color: #333; }
-        
         .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 5000; align-items: center; justify-content: center; padding: 20px; }
         .modal-content { background: white; width: 100%; max-width: 400px; border-radius: 25px; padding: 25px; position: relative; color: #333; }
     </style>
@@ -54,16 +45,16 @@
 
 <div id="side-drawer">
     <h2 style="background:none; -webkit-text-fill-color:initial; color:var(--primary)">ToolMaster Pro</h2>
-    <div class="drawer-item" onclick="toggleTheme()">🌓 Dark/Light Mode</div>
-    <div class="drawer-item" onclick="openAbout()">ℹ️ About Us</div>
-    <div class="drawer-item" onclick="location.reload()">🔄 Refresh App</div>
+    <div class="drawer-item" onclick="toggleTheme()">🌓 डार्क/लाइट मोड</div>
+    <div class="drawer-item" onclick="openAbout()">ℹ️ हमारे बारे में</div>
+    <div class="drawer-item" onclick="location.reload()">🔄 रिफ्रेश एप</div>
 </div>
 
 <div class="modal" id="aboutModal">
     <div class="modal-content">
         <span style="position:absolute; top:15px; right:20px; font-size:25px; cursor:pointer;" onclick="closeAbout()">&times;</span>
         <h3 style="color:var(--primary)">About Us</h3>
-        <p style="font-size:14px; line-height:1.6;"><b>ToolMaster Pro</b> ek modern web tool hub hai jo aapko sateek Age calculation, Secure Password generation aur Health tools muft mein pradan karta hai. Hum koi data save nahi karte.</p>
+        <p style="font-size:14px; line-height:1.6;"><b>ToolMaster Pro</b> एक आधुनिक टूल हब है। यहाँ आपकी प्राइवेसी सुरक्षित है।</p>
     </div>
 </div>
 
@@ -78,51 +69,45 @@
     <div class="tool-card">
         <h2>Day Finder 🔮</h2>
         <input type="date" id="dayInput">
-        <button onclick="calcDay()" class="main-btn" style="background:var(--accent)">Din Jane</button>
+        <button onclick="calcDay()" class="main-btn" style="background:var(--accent)">दिन जानें</button>
         <div id="dayRes" class="res-box"><b id="dayOut" style="font-size:18px;"></b></div>
     </div>
 
     <div class="tool-card">
         <h2>Password Generator 🔐</h2>
-        <button onclick="genPass()" class="main-btn" style="background:var(--secondary)">Secure Password Banayein</button>
+        <button onclick="genPass()" class="main-btn" style="background:var(--secondary)">Secure Password बनाएँ</button>
         <div id="passRes" class="res-box"><b id="passOut" style="font-family: monospace; letter-spacing: 1px; color:var(--accent);"></b></div>
     </div>
 
     <div class="tool-card">
         <h2>Word Counter ✍️</h2>
-        <textarea id="wordText" placeholder="Yahan type karein..." oninput="countWords()" rows="3"></textarea>
-        <p style="font-size:13px; font-weight:600;">Shabd: <span id="wCount">0</span> | Akshar: <span id="cCount">0</span></p>
+        <textarea id="wordText" placeholder="यहाँ टाइप करें..." oninput="countWords()" rows="3"></textarea>
+        <p style="font-size:13px; font-weight:600;">शब्द: <span id="wCount">0</span> | अक्षर: <span id="cCount">0</span></p>
     </div>
 
     <div class="tool-card">
         <h2>BMR Health Check ⚖️</h2>
-        <input type="number" id="weight" placeholder="Wajan (kg)">
-        <input type="number" id="height" placeholder="Lambai (cm)">
-        <input type="number" id="ageBmr" placeholder="Umra">
+        <input type="number" id="weight" placeholder="वजन (kg)">
+        <input type="number" id="height" placeholder="लंबाई (cm)">
+        <input type="number" id="ageBmr" placeholder="उम्र">
         <select id="gender">
-            <option value="male">Purush (Male)</option>
-            <option value="female">Mahila (Female)</option>
+            <option value="male">पुरुष (Male)</option>
+            <option value="female">महिला (Female)</option>
         </select>
-        <button onclick="calcBMR()" class="main-btn" style="background:#f59e0b">BMR Check Karein</button>
+        <button onclick="calcBMR()" class="main-btn" style="background:#f59e0b">BMR चेक करें</button>
         <div id="bmrRes" class="res-box"><b id="bmrOut"></b></div>
     </div>
 </div>
 
 <script>
     setInterval(() => { document.getElementById('clock').innerText = new Date().toLocaleTimeString(); }, 1000);
-
     function toggleDrawer() {
         const d = document.getElementById('side-drawer');
         const o = document.getElementById('overlay');
         d.classList.toggle('active');
         o.style.display = d.classList.contains('active') ? 'block' : 'none';
     }
-
-    function toggleTheme() {
-        document.body.classList.toggle('light-mode');
-        toggleDrawer();
-    }
-
+    function toggleTheme() { document.body.classList.toggle('light-mode'); toggleDrawer(); }
     function openAbout() { toggleDrawer(); document.getElementById('aboutModal').style.display = 'flex'; }
     function closeAbout() { document.getElementById('aboutModal').style.display = 'none'; }
 
@@ -136,15 +121,15 @@
         if (d < 0) { m--; d += new Date(now.getFullYear(), now.getMonth(), 0).getDate(); }
         if (m < 0) { y--; m += 12; }
         document.getElementById('ageRes').style.display = 'block';
-        document.getElementById('ageOut').innerText = `${y} saal, ${m} mahine, ${d} din`;
+        document.getElementById('ageOut').innerText = `${y} साल, ${m} महीने, ${d} दिन`;
     }
 
     function calcDay() {
         const val = document.getElementById('dayInput').value;
         if(!val) return;
-        const days = ["Ravivar", "Somvar", "Mangalvar", "Budhvar", "Guruvar", "Shukravar", "Shanivar"];
+        const days = ["रविवार", "सोमवार", "मंगलवार", "बुधवार", "गुरुवार", "शुक्रवार", "शनिवार"];
         document.getElementById('dayRes').style.display = 'block';
-        document.getElementById('dayOut').innerText = "Us din " + days[new Date(val).getDay()] + " tha.";
+        document.getElementById('dayOut').innerText = "उस दिन " + days[new Date(val).getDay()] + " था।";
     }
 
     function genPass() {
@@ -169,7 +154,7 @@
         if(!w || !h || !a) return alert("Puri jankari bharein!");
         let bmr = (g === 'male') ? (10 * w + 6.25 * h - 5 * a + 5) : (10 * w + 6.25 * h - 5 * a - 161);
         document.getElementById('bmrRes').style.display = 'block';
-        document.getElementById('bmrOut').innerText = `Aapka BMR: ${bmr.toFixed(2)} calories/din`;
+        document.getElementById('bmrOut').innerText = `आपका BMR: ${bmr.toFixed(2)} कैलोरी/दिन`;
     }
 </script>
 </body>
