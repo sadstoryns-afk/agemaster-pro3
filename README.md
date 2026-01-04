@@ -9,6 +9,15 @@
     <style>
         :root { --primary: #6366f1; --secondary: #a855f7; --accent: #10b981; --bg: #0f172a; --card: #ffffff; }
         * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+
+
+<meta name="google-site-verification" content="sQYMF8wNauVN-H3J7u6rwydmqwZ6aSw5QtrshaNevWQ" />
+
+
+
+
+
         
         body { 
             margin: 0; font-family: 'Poppins', sans-serif; background: var(--bg); color: #1e293b;
